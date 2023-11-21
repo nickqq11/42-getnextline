@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:22:05 by nhuang            #+#    #+#             */
-/*   Updated: 2023/11/21 17:48:13 by nhuang           ###   ########.fr       */
+/*   Updated: 2023/11/21 18:07:50 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,16 @@ static char	*reader(int fd, char *buffer, char *anchor)
 	return (anchor);
 }
 
-static 
+static char	*newline(char *theline)
+{
+	int		count;
+	char	anchor;
+
+	count = 0;
+	while(theline[count] != '\n' && theline[count] != '\0')
+		count++;
+	if (theline[count] )
+}
 
 char	*get_next_line(int fd)
 {
