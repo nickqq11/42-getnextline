@@ -6,13 +6,13 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:22:05 by nhuang            #+#    #+#             */
-/*   Updated: 2023/11/21 17:28:37 by nhuang           ###   ########.fr       */
+/*   Updated: 2023/11/21 17:48:13 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	reader(int fd, char *buffer, char *anchor)
+static char	*reader(int fd, char *buffer, char *anchor)
 {
 	int		check;
 	char	*temp;
