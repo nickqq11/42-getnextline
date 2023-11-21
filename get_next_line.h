@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:22:09 by nhuang            #+#    #+#             */
-/*   Updated: 2023/11/20 16:05:47 by nhuang           ###   ########.fr       */
+/*   Updated: 2023/11/21 14:59:21 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 #  define BUFFER_SIZE 1024
 # endif
 
-char	get_next_line(int fd);
+char	*get_next_line(int fd);
 
 #endif
