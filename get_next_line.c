@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:22:05 by nhuang            #+#    #+#             */
-/*   Updated: 2023/11/21 18:07:50 by nhuang           ###   ########.fr       */
+/*   Updated: 2023/11/27 16:59:48 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,18 @@ static char	*newline(char *theline)
 	char	anchor;
 
 	count = 0;
-	while(theline[count] != '\n' && theline[count] != '\0')
+	while (theline[count] != '\n' && theline[count] != '\0')
 		count++;
-	if (theline[count] )
+	if (theline[count] == '\0' || theline[1] == '\0')
+		return (0);
+	anchor = ft_substr(theline, count + 1, ft_strlen(theline) - count);
+	if (anchor == '\0')
+	{
+		free(anchor);
+		anchor = NULL;
+	}
+	theline[count + 1] = '\0';
+	return (anchor);
 }
 
 char	*get_next_line(int fd)
