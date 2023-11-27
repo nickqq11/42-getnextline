@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 10:21:57 by nhuang            #+#    #+#             */
-/*   Updated: 2023/11/27 16:59:45 by nhuang           ###   ########.fr       */
+/*   Updated: 2023/11/27 19:40:05 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-int	ft_strchr(const char *s, int i)
+char	*ft_strchr(const char *s, int i)
 {
 	while (*s != '\0' && *s != (char)i)
 		s++;
@@ -54,7 +54,7 @@ int	ft_strchr(const char *s, int i)
 		return (NULL);
 }
 
-char	ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	int		j;
@@ -69,7 +69,7 @@ char	ft_strdup(const char *s)
 	return (dst);
 }
 
-char	ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	int		i;
 	int		j;
